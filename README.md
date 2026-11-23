@@ -1,15 +1,15 @@
 # supAgent
 
-This is a studnet information management systm.
+This is a student information management system.
 
-It provids login, registraton, and grade mangement features.
+It provides login, registration, and grade management features.
 
 ## Features
 
-- Student registraton and profile mangement
-- Course enrollement and grade tracking
-- Teacher dashboard with attendence reports
+- Student registration and profile management
+- Course enrollment and grade tracking
+- Teacher dashboard with attendance reports
 
 ## Getting Started
 
-Clone the repository and opne it in your browser.
+Clone the repository and open it in your browser.
