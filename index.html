@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学生信息管理</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>学生信息管理</h1>
+
+  <div class="toolbar">
+    <input type="text" id="searchInput" placeholder="按姓名或学号搜索">
+    <button type="button" id="btnAdd" class="btn btn-primary">新增学生</button>
+  </div>
+
+  <table id="studentTable">
+    <thead>
+      <tr>
+        <th>学号</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>年龄</th>
+        <th>专业</th>
+        <th>邮箱</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody id="studentTableBody"></tbody>
+  </table>
+
+  <div id="studentModal" class="modal" hidden>
+    <div class="modal-dialog">
+      <form id="studentForm" novalidate>
+        <div class="form-field">
+          <label for="studentId">学号</label>
+          <input type="text" id="studentId" name="id" required>
+          <span class="error" id="studentIdError"></span>
+        </div>
+
+        <div class="form-field">
+          <label for="studentName">姓名</label>
+          <input type="text" id="studentName" name="name" required>
+          <span class="error" id="studentNameError"></span>
+        </div>
+
+        <div class="form-field">
+          <label for="studentGender">性别</label>
+          <select id="studentGender" name="gender">
+            <option value="男">男</option>
+            <option value="女">女</option>
+          </select>
+          <span class="error" id="studentGenderError"></span>
+        </div>
+
+        <div class="form-field">
+          <label for="studentAge">年龄</label>
+          <input type="number" id="studentAge" name="age" min="1" max="120" step="1" required>
+          <span class="error" id="studentAgeError"></span>
+        </div>
+
+        <div class="form-field">
+          <label for="studentMajor">专业</label>
+          <input type="text" id="studentMajor" name="major" required>
+          <span class="error" id="studentMajorError"></span>
+        </div>
+
+        <div class="form-field">
+          <label for="studentEmail">邮箱</label>
+          <input type="email" id="studentEmail" name="email" required>
+          <span class="error" id="studentEmailError"></span>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">保存</button>
+          <button type="button" id="btnCancel" class="btn">取消</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="students.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
